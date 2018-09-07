@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Champagne;
+    src: url('cac_champagne.woff') format('woff'),
+        url('cac_champagne.ttf') format('truetype');
+    font-family: Grunge;
+    src: url('1942.woff') format('woff'),
+        url('1942.ttf') format('truetype');
+    font-family: Dobkin;
+    src: url('DobkinPlain.woff') format('woff'),
+        url('DobkinPlain.ttf') format('truetype');
+}
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 1
+   
+   PHCT Typographic Style Sheet
+   Author: Jacob Gordon
+   Date:   9/6/18
+   
+   Filename: ph_styles.css
+
+*/
+/* Structural Styles */
+html {
+    /*Set the whole background of the web page/html file to a greyish color*/
+    background-color: hsl(91, 8%, 56%);
+}
+
+body {
+    /*Sets the background of the body element as a lightish grey*/
+    background-color: hsl(58, 31%, 84%);
+    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+}
+
+header {
+    background-color: black;
+}
+
+p {
+    margin: 0;
+    padding: 5px 25px 25px 25px;
+}
+
+body>p {
+    font-size: 1.1em;
+}
+
+address {
+    font-style: normal;
+    font-size: 0.9em;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+nav {
+    font-family: Trebuchet MS’, Helvetica, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Navigation Styles */
+/* Section Styles */
+/* Description List Styles */
