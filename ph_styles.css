@@ -1,17 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: Champagne;
-    src: url('cac_champagne.woff') format('woff'),
-        url('cac_champagne.ttf') format('truetype');
-    font-family: Grunge;
-    src: url('1942.woff') format('woff'),
-        url('1942.ttf') format('truetype');
-    font-family: Dobkin;
-    src: url('DobkinPlain.woff') format('woff'),
-        url('DobkinPlain.ttf') format('truetype');
-}
-
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 2
@@ -24,6 +12,25 @@
    Filename: ph_styles.css
 
 */
+/*We are setting outside fonts into the document*/
+@font-face {
+    font-family: Champagne;
+    src: url('cac_champagne.woff') format('woff'),
+        url('cac_champagne.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Grunge;
+    src: url('1942.woff') format('woff'),
+        url('1942.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Dobkin;
+    src: url('DobkinPlain.woff') format('woff'),
+        url('DobkinPlain.ttf') format('truetype');
+}
+
 /* Structural Styles */
 html {
     /*Set the whole background of the web page/html file to a greyish color*/
@@ -33,20 +40,24 @@ html {
 body {
     /*Sets the background of the body element as a lightish grey*/
     background-color: hsl(58, 31%, 84%);
-    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
 
+/*The header element is having it's background set to black*/
 header {
     background-color: black;
 }
 
+/*The margin is set for paragraph tags and the padding is set*/
 p {
     margin: 0;
     padding: 5px 25px 25px 25px;
 }
 
+/*All paragraph tags that are direct children of the body element is having its font changed sizes and the text set to center*/
 body>p {
     font-size: 1.1em;
+    text-align: center;
 }
 
 address {
@@ -57,12 +68,85 @@ address {
     text-align: center;
 }
 
-nav {
-    font-family: Trebuchet MS’, Helvetica, sans-serif;
+/* Navigation Styles */
+/*The navagation tag is having its font family set and the padding for the top and bottom set*/
+nav a {
+    font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-/* Navigation Styles */
+/*The links on the navagation list no longer have an underline, are set to white, and have a dark transparent background color*/
+nav a:visited,
+nav a:link {
+    background-color: hsla(0, 0%, 42%, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/*When the mouse goes above the link, it changes and has changes to a more darker background for that section */
+nav a:active,
+nav a:hover {
+    color: hsla(0, 0%, 100%, 0.7);
+    background-color: hsl(0, 0%, 42%, 0.7);
+}
+
 /* Section Styles */
+/*Each section is given the class of playbill, and the h1 element is getting it's sized changed, the margin set, font weight set, and all the padding around it set.*/
+section.playbill h1 {
+    font-size: 3em;
+    margin: 0px;
+    font-weight: normal;
+    padding: 20px 0px 10px 20px;
+}
+
+/*The font for the header is being changed with it's fonts*/
+section#play1 h1 {
+    font-family: Champagne, cursive;
+}
+
+section#play1 {
+    background-color: hsl(240, 100%, 88%);
+}
+
+/*Font is being changed for h1 element*/
+section#play2 h1 {
+    font-family: Grunge, ‘Times New Roman’, Times, serif;
+}
+
+section#play2 {
+    background-color: hsl(25, 88%, 73%);
+}
+
+/*Font is being changed for h1 element*/
+section#play3 h1 {
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+section#play3 {
+    background-color: hsl(0, 100%, 75%);
+}
+
+/*Font is being changed for h1 element*/
+section#play4 h1 {
+    font-family: Dobkin, cursive;
+}
+
+section#play4 {
+    background-color: hsl(296, 86%, 86%);
+}
+
 /* Description List Styles */
+/*The font is being changed, the text is being set as bold, and the color of the text is more darker*/
+dt {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.4);
+}
+
+/*The font is being changed sizes, the margins are being set*/
+dd {
+    font-size: 1.3em;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
